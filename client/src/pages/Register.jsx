@@ -80,7 +80,8 @@ const RegistrationForm = () => {
     try{if(passwordResult && password === confirmPassword){
         const res = await axios.post('/register',{username,password})
         if(res.data.username === username){
-            navigate('/account')
+            alert("Registration successfull please login")
+            navigate('/login')
         }
     }else{
         setValidPassword(true)
